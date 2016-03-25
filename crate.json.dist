@@ -1,0 +1,40 @@
+{
+    "alias": "crate.phar",
+    "chmod": "0755",
+    "compactors": [
+        "CmPayments\\Crate\\Compactor\\Json",
+        "CmPayments\\Crate\\Compactor\\Php"
+    ],
+    "directories": ["src/lib"],
+    "extract": true,
+    "files": [
+        "LICENSE",
+        "res/schema.json",
+        "src/vendors/herrera-io/phar-update/res/schema.json"
+    ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "File",
+                "mikey179",
+                "Net",
+                "phpunit",
+                "phpunit-test-case",
+                "Tester",
+                "Tests",
+                "tests",
+                "yaml"
+            ],
+            "in": "src/vendors"
+        }
+    ],
+    "git-commit": "git-commit",
+    "git-version": "git-version",
+    "main": "bin/crate",
+    "output": "crate-@git-version@.phar",
+    "replacements": {
+        "manifest_url": "http://box-project.github.io/box2/manifest.json"
+    },
+    "stub": true
+}
