@@ -11,7 +11,7 @@ task(
             ? ' --verbose'
             : '';
 
-        passthru("bin/box build --ansi$verbose", $exit);
+        passthru("bin/crate build --ansi$verbose", $exit);
 
         return $exit;
     }
